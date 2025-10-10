@@ -1,26 +1,19 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
-import { useState } from "react";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./Pages/Home.tsx";
+import Tasks from './Pages/Tasks.tsx';
 
 function App() {
-  const handleClick = () => setCislo(cislo + 1);
-
-  const [cislo, setCislo] = useState(0);
-
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <div>
-            <h1 className="text-primary">Počítadlo</h1>
-            <button className="btn-primary" onClick={handleClick}>
-              Klikni na mě
-            </button>
-            <p className="text-secondary">{cislo}</p>
-          </div>
+    return (
+        <div className="container-fluid">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/tasks" element={<Tasks/>}/>
+                </Routes>
+            </BrowserRouter>
         </div>
-      </div>
-    </div>
-  );
+    )
 }
+
 
 export default App;
