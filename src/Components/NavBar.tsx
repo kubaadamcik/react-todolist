@@ -1,7 +1,8 @@
 function NavBar() {
-    return <div className="container-fluid">
-        <div className="navbar">
-            <ul className="navbar-nav">
+    return <div className="navbar">
+        <div className="container-fluid">
+            <a className="navbar-brand">To-Do</a>
+            <ul className="navbar-nav flex-row gap-3">
                 <li className="nav-item">
                     <a className="nav-link" href="/">Home</a>
                 </li>
